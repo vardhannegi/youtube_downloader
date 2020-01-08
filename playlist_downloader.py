@@ -10,13 +10,13 @@ s = []
 
 
 ## to name and save the playlist folder and download path respectively 
-directory = 'Hacker101'
-savePath = "G:/Download/video/"
+savePath = str(input("Paste your download path here: "))
+directory = str(input("Write the folder name for downloading playlist: "))
 path = os.path.join(savePath, directory)
 
 
 ## link parser
-past_link_here = "https://www.youtube.com/playlist?list=PLxhvVyxYRviZd1oEA9nmnilY3PhVrt4nj"
+past_link_here = str(input("Paste your link here: "))
 html_page = urllib.request.urlopen(past_link_here)
 x = html_page.read()
 soup = BeautifulSoup(x, 'html.parser')
