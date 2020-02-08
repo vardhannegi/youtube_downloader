@@ -37,7 +37,7 @@ create_project_dir(path)
 
 
 ## downloading videos by using links from list s = []
-for x in s:
+for x in set(s):
     link="https://www.youtube.com" + x
     yt = YouTube(link)
     k = yt.title
